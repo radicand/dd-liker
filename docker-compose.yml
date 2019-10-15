@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  ddliker:
+    image: dd-liker:local
+    env_file:
+      - .env
+    volumes:
+      - dd_tokenstore:/mnt/dd_tokenstore
+
+volumes:
+  dd_tokenstore:

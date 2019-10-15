@@ -1,0 +1,19 @@
+{
+  "name": "dd-liker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/request": "^2.48.3",
+    "@types/request-promise": "^4.1.44",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
+  }
+}

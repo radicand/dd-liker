@@ -9,6 +9,7 @@ Using
 ===
 Populate an .env file with the following:
 
+```bash
 APP_ID=
 AUTH_ID=
 FEED_SIZE=200
@@ -16,6 +17,7 @@ FIRST_NAME=Your name in the app here
 LAST_NAME=Your name in the app here
 ACCESS_TOKEN=
 REFRESH_TOKEN=
+```
 
 You can get all the values by logging into the HTML5 version of the app and extracting them from LocalStorage:
 - authentication/... key for tokens

@@ -1,0 +1,69 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.18.0 ()
+  creationTimestamp: null
+  labels:
+    io.kompose.service: ddliker
+  name: ddliker
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: ddliker
+    spec:
+      containers:
+        - env:
+            - name: ACCESS_TOKEN
+              valueFrom:
+                configMapKeyRef:
+                  key: ACCESS_TOKEN
+                  name: ddliker-env
+            - name: APP_ID
+              valueFrom:
+                configMapKeyRef:
+                  key: APP_ID
+                  name: ddliker-env
+            - name: AUTH_ID
+              valueFrom:
+                configMapKeyRef:
+                  key: AUTH_ID
+                  name: ddliker-env
+            - name: FEED_SIZE
+              valueFrom:
+                configMapKeyRef:
+                  key: FEED_SIZE
+                  name: ddliker-env
+            - name: FIRST_NAME
+              valueFrom:
+                configMapKeyRef:
+                  key: FIRST_NAME
+                  name: ddliker-env
+            - name: LAST_NAME
+              valueFrom:
+                configMapKeyRef:
+                  key: LAST_NAME
+                  name: ddliker-env
+            - name: REFRESH_TOKEN
+              valueFrom:
+                configMapKeyRef:
+                  key: REFRESH_TOKEN
+                  name: ddliker-env
+          image: radicand/dd-liker:latest
+          name: ddliker
+          resources: {}
+          volumeMounts:
+            - mountPath: /mnt/dd_tokenstore
+              name: dd-tokenstore
+      restartPolicy: Always
+      volumes:
+        - name: dd-tokenstore
+          persistentVolumeClaim:
+            claimName: dd-tokenstore
+status: {}

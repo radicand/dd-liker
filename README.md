@@ -23,3 +23,5 @@ You can get all the values by logging into the HTML5 version of the app and extr
 - authentication/... key for tokens
 - bundle/config for the AUTH_ID
 - bundle/events for the APP_ID
+
+There are also Kubernetes and Docker deployment files present if you'd like to use them. The Docker image referenced in both of them is arm64 architecture so you may need to build your own version until I'm able to get multiarch support (not a priority here).

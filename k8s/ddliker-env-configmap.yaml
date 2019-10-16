@@ -1,0 +1,15 @@
+apiVersion: v1
+data:
+  ACCESS_TOKEN: ""
+  APP_ID: ""
+  AUTH_ID: ""
+  FEED_SIZE: 200
+  FIRST_NAME: ""
+  LAST_NAME: ""
+  REFRESH_TOKEN: ""
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: ddliker-env
+  name: ddliker-env

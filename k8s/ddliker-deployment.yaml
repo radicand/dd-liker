@@ -40,6 +40,11 @@ spec:
                 configMapKeyRef:
                   key: FEED_SIZE
                   name: ddliker-env
+            - name: FEED_REFRESH
+              valueFrom:
+                configMapKeyRef:
+                  key: FEED_REFRESH
+                  name: ddliker-env
             - name: FIRST_NAME
               valueFrom:
                 configMapKeyRef:

@@ -7,12 +7,13 @@ Some conferences I attend have a swag shop with nice things, but require you to 
 
 Using
 ===
-Populate an .env file with the following:
+Ensure your environment contains the following env vars set (if using Docker, place in an .env file; Kubernetes define in the ConfigMap)
 
 ```bash
 APP_ID=
 AUTH_ID=
 FEED_SIZE=200
+FEED_REFRESH=60
 FIRST_NAME=Your name in the app here
 LAST_NAME=Your name in the app here
 ACCESS_TOKEN=

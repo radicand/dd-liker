@@ -2,7 +2,7 @@ const APP_ID = process.env.APP_ID;
 const AUTH_ID = process.env.AUTH_ID;
 
 export const FEED_SIZE = Number(process.env.FEED_SIZE);
-export const FEED_REFRESH = 60;
+export const FEED_REFRESH = Number(process.env.FEED_REFRESH || 60);
 export const TOKEN_PAYLOAD = {
 	access_token: process.env.ACCESS_TOKEN,
 	token_type: 'bearer',

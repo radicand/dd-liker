@@ -3,7 +3,7 @@ data:
   ACCESS_TOKEN: ""
   APP_ID: ""
   AUTH_ID: ""
-  FEED_SIZE: 200
+  FEED_SIZE: "200"
   FEED_REFRESH: 60
   FIRST_NAME: ""
   LAST_NAME: ""
